@@ -1,0 +1,3 @@
+INDEX VERSION 1.126+C:\Users\FELIPE\Documents\2014.1\empreendedorismo\projeto\Android\.metadata\.plugins\org.eclipse.jdt.core
+3174848118.index
+1687744448.index
