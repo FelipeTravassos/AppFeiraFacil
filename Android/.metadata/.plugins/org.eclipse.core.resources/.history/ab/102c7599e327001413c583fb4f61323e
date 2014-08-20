@@ -1,0 +1,17 @@
+package com.example.feirafacil.system;
+
+public class Supermarket {
+	
+	private Long id;
+	private String name;
+	private String address;
+	private Double price;
+	
+	public Supermarket(Long id, String name, String address, double price) {
+		this.id = id;
+		this.name = name;
+		this.address = address;
+		this.price = price;
+	}
+	
+}
