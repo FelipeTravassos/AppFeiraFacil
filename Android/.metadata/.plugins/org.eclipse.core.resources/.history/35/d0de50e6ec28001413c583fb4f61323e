@@ -1,0 +1,23 @@
+package com.example.feirafacil.system;
+
+/**
+ * 
+ * @author FELIPE
+ */
+public class Product {
+	Long id;
+	int quantidade;
+	
+	public Product(long id, int quantidade) {
+		this.id = id;
+		this.quantidade = quantidade;
+	}
+
+	public Long getId() {
+		return id;
+	}
+
+	public int getQuantidade() {
+		return quantidade;
+	}
+}

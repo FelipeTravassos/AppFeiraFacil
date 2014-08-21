@@ -1,0 +1,11 @@
+package com.example.feirafacil.system;
+
+public class Product {
+	Long id;
+	int quantidade;
+	
+	public Product(long id, int quantidade) {
+		this.id = id;
+		this.quantidade = quantidade;
+	}
+}

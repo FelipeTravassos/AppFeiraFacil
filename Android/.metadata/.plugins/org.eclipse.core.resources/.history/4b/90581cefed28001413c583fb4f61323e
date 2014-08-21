@@ -1,0 +1,9 @@
+package com.example.feirafacil.utils;
+
+import com.example.feirafacil.cloud.CloudUtils;
+
+public class Utils {
+
+	public String separador = CloudUtils.getSeparador();
+
+}

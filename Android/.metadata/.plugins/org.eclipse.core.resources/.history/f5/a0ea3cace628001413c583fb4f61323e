@@ -1,0 +1,13 @@
+package com.example.feirafacil.search;
+
+import java.util.List;
+
+import com.example.feirafacil.cloud.CloudSearch;
+import com.example.feirafacil.system.Product;
+
+public class Search {
+	CloudSearch cs = new CloudSearch();
+	public void buscar(List<Product> produtos) {
+		
+	}
+}

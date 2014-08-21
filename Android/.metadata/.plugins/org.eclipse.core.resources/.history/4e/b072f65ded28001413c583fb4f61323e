@@ -1,0 +1,6 @@
+package com.example.feirafacil.payment;
+
+public interface IPayment {
+
+	public void pagar(Long IdSupermercado, List<Product> produtos, Double preco);
+}

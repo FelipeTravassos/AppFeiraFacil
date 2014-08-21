@@ -1,13 +1,18 @@
 package com.example.feirafacil.system;
 
+/**
+ * 
+ * @author FELIPE
+ */
 public class Address {
-	private int number;
+	
+	private String number;
 	private String road;
 	private String neighborhood;
 	private String city;
 	private String phoneNumber;
 	
-	public Address(int number, String road, String neighborhood, String city, String phoneNumber) {
+	public Address(String number, String road, String neighborhood, String city, String phoneNumber) {
 		this.number = number;
 		this.road = road;
 		this.neighborhood = neighborhood;
@@ -19,7 +24,7 @@ public class Address {
 	 * Get number
 	 * @return
 	 */
-	public int getNumber() {
+	public String getNumber() {
 		return number;
 	}
 

@@ -1,0 +1,36 @@
+package com.example.feirafacil.search;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.example.feirafacil.cloud.CloudSearch;
+import com.example.feirafacil.system.Address;
+import com.example.feirafacil.system.Product;
+import com.example.feirafacil.system.Supermarket;
+
+public class Search {
+	CloudSearch cs = new CloudSearch();
+	private Utils utils = new Utils();
+	
+	public void buscar(List<Product> produtos) {
+		List<Supermarket> supermercados = gerarObjetosSupermercados(cs.buscar(produtos));
+	}
+	
+	private List<Supermarket> gerarObjetosSupermercados(List<String> strSupermercados){
+		List<Supermarket> supermercados = new ArrayList<Supermarket>();
+		for (String spr : strSupermercados) {
+			Long id = Long.parseLong(spr.split(utils.separador)[0]);
+			String nome = spr.split(utils.separador)[1];
+			Address endereco = getEndereco(spr.split(utils.separador)[2]);
+			Double preco = Double.parseDouble(spr.split(utils.separador)[3]);
+			supermercados.add(new Supermarket(id, nome, endereco, preco));
+		}
+		return supermercados;
+	}
+	
+	private Address getEndereco(String endereco) {
+		Address retorno;
+		
+		return retorno;
+	}
+}

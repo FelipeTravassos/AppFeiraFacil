@@ -1,11 +1,15 @@
 package com.example.feirafacil.system;
 
+/**
+ * 
+ * @author FELIPE
+ */
 public class Supermarket {
 	
 	private Long id;
 	private String name;
 	private Address address;
-	private Double price;
+	private Double totalPrice;
 	
 	/**
 	 * Constructor 
@@ -22,7 +26,7 @@ public class Supermarket {
 		this.id = id;
 		this.name = name;
 		this.address = address;
-		this.price = price;
+		this.totalPrice = price;
 	}
 
 	/**
@@ -30,7 +34,7 @@ public class Supermarket {
 	 * @return Double with total price of products in supermarket
 	 */
 	public Double getPrice() {
-		return price;
+		return totalPrice;
 	}
 
 	/**
@@ -39,7 +43,7 @@ public class Supermarket {
 	 * 			Double with price for all select products in the supermarket
 	 */
 	public void setPrice(Double price) {
-		this.price = price;
+		this.totalPrice = price;
 	}
 
 	/**
