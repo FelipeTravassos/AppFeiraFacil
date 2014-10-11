@@ -11,6 +11,8 @@ import nucleoSupermercado.utils.VerifyConsistency;
  */
 public class Pedidos {
 
+	GerPedidos gerPedidos = new GerPedidos();
+	
 	/**
 	 * Iterator with id of requests in order
 	 */
@@ -34,7 +36,7 @@ public class Pedidos {
 	 * Update the iterator with the ids of the next orders
 	 */
 	private void update() throws ExceptionUpdate{
-		idOrders = GerPedidos.getPedidosEmAberto(this.idSupermarket).iterator();
+		idOrders = gerPedidos.getPedidosEmAberto(this.idSupermarket).iterator();
 	}
 	
 	/**
@@ -42,7 +44,7 @@ public class Pedidos {
 	 * @return integer with amount of open orders
 	 */
 	public int amountOfOpenOrders() throws ExceptionUpdate{
-		return GerPedidos.amountOfOpenOrders(this.idSupermarket);
+		return gerPedidos.amountOfOpenOrders(this.idSupermarket);
 	}
 	
 	/**
@@ -50,7 +52,7 @@ public class Pedidos {
 	 * @param id of request complete
 	 */
 	public void closeTheRequest(String id) throws ExceptionUpdate{
-		GerPedidos.closeTheRequest(id, this.idSupermarket);
+		gerPedidos.closeTheRequest(id, this.idSupermarket);
 	}
 	
 	/**
@@ -62,7 +64,7 @@ public class Pedidos {
 			update();
 		}
 		if(idOrders.hasNext()){
-			return GerPedidos.getPedido(idOrders.next(), this.idSupermarket);
+			return gerPedidos.getPedido(idOrders.next(), this.idSupermarket);
 		}else{
 			return null;
 		}

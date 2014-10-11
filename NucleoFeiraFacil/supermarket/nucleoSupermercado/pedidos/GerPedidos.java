@@ -12,6 +12,8 @@ import nucleoSupermercado.exceptions.ExceptionUpdate;
  */
 public class GerPedidos {
 
+	DataBaseSupermarketIdeal DBSupermarketIdeal = new DataBaseSupermarketIdeal();
+	
 	/**
 	 * Get open request
 	 * @param idSupermarket
@@ -20,8 +22,8 @@ public class GerPedidos {
 	 * 		ArrayList<String> with requests in order
 	 * @throws ExceptionUpdate
 	 */
-	public static ArrayList<String> getPedidosEmAberto(String idSupermarket) throws ExceptionUpdate {
-		return DataBaseSupermarketIdeal.getPedidosEmAberto(idSupermarket);
+	public ArrayList<String> getPedidosEmAberto(String idSupermarket) throws ExceptionUpdate {
+		return DBSupermarketIdeal.getPedidosEmAberto(idSupermarket);
 	}
 
 	/**
@@ -34,9 +36,9 @@ public class GerPedidos {
 	 * 		Order
 	 * @throws ExceptionUpdate
 	 */
-	public static Pedido getPedido(String id, String idSupermarket) throws ExceptionUpdate {
+	public Pedido getPedido(String id, String idSupermarket) throws ExceptionUpdate {
 		Pedido pedido = new Pedido(
-				DataBaseSupermarketIdeal.getDadosPedido(id, idSupermarket));
+				DBSupermarketIdeal.getDadosPedido(id, idSupermarket));
 		return pedido;
 	}
 
@@ -48,8 +50,8 @@ public class GerPedidos {
 	 * 		Amount of open orders
 	 * @throws ExceptionUpdate
 	 */
-	public static int amountOfOpenOrders(String idSupermarket) throws ExceptionUpdate {
-		return DataBaseSupermarketIdeal.amountOfOpenOrders(idSupermarket);
+	public int amountOfOpenOrders(String idSupermarket) throws ExceptionUpdate {
+		return DBSupermarketIdeal.amountOfOpenOrders(idSupermarket);
 	}
 
 	/**
@@ -60,8 +62,8 @@ public class GerPedidos {
 	 * 		Id of the supermarket
 	 * @throws ExceptionUpdate
 	 */
-	public static void closeTheRequest(String id, String idSupermarket) throws ExceptionUpdate {
-		DataBaseSupermarketIdeal.updateRequest(id, idSupermarket);
+	public void closeTheRequest(String id, String idSupermarket) throws ExceptionUpdate {
+		DBSupermarketIdeal.updateRequest(id, idSupermarket);
 	}
 
 }
